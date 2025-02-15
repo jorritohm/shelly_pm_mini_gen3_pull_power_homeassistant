@@ -1,0 +1,15 @@
+#############################
+# Your configuration.yaml
+#############################
+
+rest:
+  - resource: "http://10.21.8.189/rpc/PM1.GetStatus?id=0"
+    scan_interval: 1
+    timeout: 1
+    sensor:
+      - name: "Shelly Power Force Update"
+        value_template: "{{value_json.apower}}"
+        device_class: "power"
+        unit_of_measurement: "W"
+        icon: "mdi:flash"
+        unique_id: "shelly_force"
