@@ -3,7 +3,7 @@
 #############################
 
 rest:
-  - resource: "http://10.21.8.189/rpc/PM1.GetStatus?id=0"
+  - resource: "http://<YOUR.SHELLY.IP.ADDRESS>/rpc/PM1.GetStatus?id=0"      # Replace <YOUR.SHELLY.IP.ADDRESS>
     scan_interval: 1
     timeout: 1
     sensor:
